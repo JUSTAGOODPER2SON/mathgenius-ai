@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090f">
+  <title>MathGenius AI — Tutor Matematik</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="/">
+        <span class="brand-icon">∑</span>
+        <span>MathGenius <span class="purple">AI</span></span>
+      </a>
+
+      <button id="newChat" class="new-chat">
+        <span>＋</span> Chat baharu
+      </button>
+
+      <div class="side-label">PANDUAN</div>
+      <div class="tip">
+        <span>✦</span>
+        <div>
+          <strong>Belajar, bukan menghafal</strong>
+          <p>Minta AI terangkan sebab di sebalik setiap langkah.</p>
+        </div>
+      </div>
+
+      <div class="sidebar-bottom">
+        <span class="status-dot"></span>
+        <span>MathGenius AI</span>
+        <span class="version">v1.0</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="mobileMenu" class="icon-button" aria-label="Buka menu">☰</button>
+        <div class="top-title">
+          <span class="online-dot"></span>
+          Tutor Matematik AI
+        </div>
+        <span class="badge">BETA</span>
+      </header>
+
+      <section id="chat" class="chat">
+        <div id="welcome" class="welcome">
+          <div class="hero-icon">∑</div>
+          <div class="eyebrow">AI MATH ASSISTANT</div>
+          <h1>Matematik jadi <span class="gradient">lebih mudah.</span></h1>
+          <p class="welcome-text">
+            Tulis soalan atau muat naik gambar.
+            Kita selesaikan bersama, langkah demi langkah.
+          </p>
+
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Selesaikan 2x + 5 = 17 langkah demi langkah.">
+              <span>𝑥</span>
+              <span><strong>Algebra</strong><small>Selesaikan 2x + 5 = 17</small></span>
+              <span class="arrow">↗</span>
+            </button>
+            <button class="suggestion" data-prompt="Terangkan teorem Pythagoras dan berikan satu contoh pengiraan.">
+              <span>△</span>
+              <span><strong>Geometri</strong><small>Teorem Pythagoras</small></span>
+              <span class="arrow">↗</span>
+            </button>
+            <button class="suggestion" data-prompt="Terangkan cara mengira peratus dengan contoh mudah.">
+              <span>%</span>
+              <span><strong>Peratus</strong><small>Belajar dari asas</small></span>
+              <span class="arrow">↗</span>
+            </button>
+            <button class="suggestion" data-prompt="Bina satu soalan Matematik Tingkatan 3 tentang persamaan linear dan ajar saya cara menjawabnya.">
+              <span>✦</span>
+              <span><strong>Latihan</strong><small>Cuba soalan sendiri</small></span>
+              <span class="arrow">↗</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+      </section>
+
+      <section class="composer-area">
+        <div id="imagePreview" class="image-preview" hidden>
+          <img id="previewImage" alt="Pratonton gambar soalan">
+          <button id="removeImage" aria-label="Buang gambar">×</button>
+        </div>
+
+        <form id="chatForm" class="composer">
+          <textarea
+            id="question"
+            placeholder="Tanya apa-apa soalan Matematik..."
+            rows="2"
+            maxlength="4000"
+            aria-label="Soalan Matematik"
+          ></textarea>
+
+          <div class="composer-tools">
+            <div class="tool-left">
+              <button type="button" id="uploadButton" class="tool-button">
+                ＋ <span>Gambar soalan</span>
+              </button>
+              <input id="imageInput" type="file"
+                accept="image/png,image/jpeg,image/webp,image/gif"
+                hidden>
+              <span class="hint">Enter untuk hantar</span>
+            </div>
+            <button id="sendButton" class="send-button" type="submit" aria-label="Hantar soalan">
+              ↑
+            </button>
+          </div>
+        </form>
+        <p class="disclaimer">
+          AI boleh membuat kesilapan. Semak semula pengiraan dan jawapan.
+        </p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
